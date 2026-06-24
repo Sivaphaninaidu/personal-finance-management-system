@@ -66,11 +66,6 @@ app.include_router(
 )
 
 app.include_router(
-    auth.router,
-    prefix="/auth",
-    tags=["Authentication"]
-)
-app.include_router(
     budgets.router,
     prefix="/budgets",
     tags=["Budgets"]
