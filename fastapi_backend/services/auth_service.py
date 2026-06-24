@@ -23,7 +23,12 @@ ALGORITHM = "HS256"
 
 def register_user(data):
 
-    user = User.objects.create(
+    if User.objects.filter(email=data.email).exists():
+        return {
+            "message": "Email already exists"
+        }
+
+    User.objects.create(
         username=data.username,
         email=data.email,
         password=data.password
@@ -31,7 +36,7 @@ def register_user(data):
 
     return {
         "message": "Registration Successful"
-    }
+    }   
 
 
 def login_user(data):
