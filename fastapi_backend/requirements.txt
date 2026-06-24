@@ -8,3 +8,4 @@ sqlalchemy
 python-multipart
 passlib[bcrypt]
 bcrypt
+psycopg2-binary
