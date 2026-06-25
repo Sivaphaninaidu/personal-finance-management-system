@@ -56,7 +56,7 @@ function Navbar() {
   className="logo-title"
   onClick={() => navigate("/dashboard")}
 >
-  Personal Finance Management System
+  PFMS
 </h2>
 
       <div
